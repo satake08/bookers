@@ -1,0 +1,18 @@
+<!--ホーム画面(トップ画面)-->
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+  <p>Title</p>
+  <span>
+    <%= link_to book.title, book_path(book.id) %>
+  </span>
+  
+  <p>Body</p>
+  <span>
+    <%= link_to book.body, book_path(book.id) %>
+  </span>
+  
+  <a class="Show" href="Show">Show</a>
+  <a class="Edit" href="Edit">Edit</a>
+  <a class="Destroy" href="Destroy">Destroy</a>
+<% end %>
