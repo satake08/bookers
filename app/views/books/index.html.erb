@@ -1,18 +1,34 @@
 <!--ホーム画面(トップ画面)-->
-<h1>Books</h1>
-
+<h3>Books</h3> 
 <% @books.each do |book| %>
-  <p>Title</p>
-  <span>
-    <%= link_to book.title, book_path(book.id) %>
-  </span>
-  
-  <p>Body</p>
-  <span>
-    <%= link_to book.body, book_path(book.id) %>
-  </span>
-  
-  <a class="Show" href="Show">Show</a>
-  <a class="Edit" href="Edit">Edit</a>
-  <a class="Destroy" href="Destroy">Destroy</a>
+<table> 
+  <thead> 
+    <tr> 
+      <th>title</th> 
+      <th>body</th> 
+      <th></th> 
+    </tr> 
+  </thead> 
+  <tbody> 
+  <tr> 
+    <td> <%= post.title %> </td> 
+    <td> <%= post.body %> </td> 
+    <td> <%= link_to "show", post_path(post.id) %> 
+         <%= link_to "edit", edit_post_path(post.id) %> 
+         <%= link_to "destroy", destroy_post_path(post.id), method: :delete, "data-confirm" => "Are you sure?" %> 
+    </td> 
+  </tr> 
+  <% end %> 
+  </tbody> 
+</table> 
+
+<h3>New book</h3> 
+<%= form_for(@post) do |f| %>
+<h4>Title</h4>
+<%= f.text_field :title %>
+
+<h4>Body</h4>
+<%= f.text_area :body %>
+<br><%= f.submit 'Create Book' %></br>
+
 <% end %>
