@@ -31,6 +31,10 @@ body {
   display: block;
 }
 
+storong {
+  font-weight: bold;
+}
+
 p {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
