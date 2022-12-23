@@ -41,3 +41,13 @@ p {
   line-height: 18px;
   margin: 33px;
 }
+
+.title{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.body{
+  display: block;
+  margin-bottom: 10px;
+}
