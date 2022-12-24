@@ -42,12 +42,46 @@ p {
   margin: 33px;
 }
 
-.title{
-  display: block;
+
+a {
+  color: #000;
+  background-color: #fff;
+}
+
+a:hover{
+  color: #fff;
+  background-color: #000;
+}
+
+h1{
+  margin-bottom: 20px;
+}
+
+
+.book-body{
   margin-bottom: 10px;
 }
 
-.body{
-  display: block;
+
+.book-title{
   margin-bottom: 10px;
+}
+
+h2.new{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td{
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.flash{
+  color: #008000;
 }

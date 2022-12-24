@@ -1,11 +1,12 @@
 <!--詳細画面-->
-<div>
+<p class ="flash">
   <%= flash[:notice] %>
-</div>
+</p>
 
-<p><storong>Title: </storong></p>
-<p><storong>Body: </storong></p>
 
-<a class="edit" href="edit">edit</a>
-"|"
-<a class="back" href="books">back</a>
+<p><storong>Title: </storong> <%= @book.title %> </p>
+<p><storong>Body: </storong><%= @book.body %></p>
+
+<a class="edit" href="edit">Edit</a>
+ |
+<a class="back" href="books">Back</a>
