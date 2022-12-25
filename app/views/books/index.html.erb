@@ -32,22 +32,23 @@
 
 
 <h2 class="new">New book</h2>
-<!--% if @book.errors.any? %>
-  %= @book.errors.count %>errors prohibited this book from being saved:
+
+<!--% if @Book && @Book.errors.any? %>
+    %= @Book.errors.count %>errors prohibited this obj from being saved:<br>
+     % @Book.errors.full_messages.each do |message| %>
+        %= message %>
+  % end %>-->
+<!--% end %>-->
+<% if @book.errors.any? %>
+  <%= @book.errors.count %> errors prohibited this book from being saved:
   <ul>
-    % @book.errors.full_messages.each do |message| %>
-      <li>%= message %></li>
-  % end %>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+   <% end %>
   </ul>
-% end %>-->
-<% if @book && @book.errors.any? %>
-    <%= @books.errors.count %>errors prohibited this obj from being saved:<br>
-     <% @books.errors.full_messages.each do |message| %>
-        <%= message %>
-  <% end %>
 <% end %>
 
-<%= form_with model: @Book, url: '/books', method: :post do |f| %>
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
 <div class="book-title">
   <th class="title">Title</th><br>
   <%= f.text_field :title %>

@@ -7,6 +7,8 @@
 <p><storong>Title: </storong> <%= @book.title %> </p>
 <p><storong>Body: </storong><%= @book.body %></p>
 
-<a class="edit" href="edit">Edit</a>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
  |
-<a class="back" href="books">Back</a>
+<%= link_to "Back", books_path %>
+
